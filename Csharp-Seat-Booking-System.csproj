@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Csharp_Seat_Booking_System</RootNamespace>
+  </PropertyGroup>
+
+
+
+</Project>

@@ -1,0 +1,19 @@
+@using Csharp_Seat_Booking_System.Models;
+@{
+    ViewData["Title"] = "Events";
+    Event[] Events = (Event[])ViewData["Events"];
+    
+}
+
+@foreach (var EventHappening in Events)
+{
+<a>
+<div>
+<img src=@EventHappening.ImgSrc />
+<h3>@EventHappening.EventName</h3>
+<p>@EventHappening.EventDescription</p>
+</div>
+</a>
+}
+    </div>
+}
