@@ -24,5 +24,9 @@ namespace Csharp_Seat_Booking_System.Controllers
         public IActionResult AddEvent(){
             return View();
         }
+
+        public IActionResult BookSeat(){
+        //must be get to get the movie being booked
+        }
     }
 }

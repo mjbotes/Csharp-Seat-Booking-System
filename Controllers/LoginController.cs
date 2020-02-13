@@ -26,5 +26,9 @@ namespace Csharp_Seat_Booking_System.Controllers
         public IActionResult UserRegister(){
             return View();
         }
+
+        public IActionResult CompanyRegister(){
+            return View();
+        }
     }
 }

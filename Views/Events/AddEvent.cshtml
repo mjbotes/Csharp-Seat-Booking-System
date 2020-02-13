@@ -1,0 +1,58 @@
+@{
+    ViewData["Title"] = "Registeration";
+}
+
+<div class="text-center">
+    <div class="form-group">
+        <h2>User Registeration</h2>
+        <p>Register your company to start selling tickets.</p>
+        <form>
+            <label>Upload Movie Poster</label>
+            <input type="file" />
+            <br />
+            <label>Event Name</label>
+            <input type="text" name="email" placeholder="Enter First name" />
+            <label>Event Type</label>
+            <select id="type">
+                <option value="Cinema">Comedy</option>
+                <option value="Staduim">Romcom</option>
+                <option value="Airline">Thriller</option>
+            </select>
+            <br />
+            <label>Start Date</label>
+            <input type="date" />
+            <label>End Date</label>
+            <input type="date" />
+            <br />
+            <input type="checkbox" name="Sunday" value="Sunday">
+            <label for="Sunday">Sunday</label>
+            <input type="checkbox" name="Monday" value="Monday">
+            <label for="Monday">Monday</label>
+            <input type="checkbox" name="Tuesday" value="Tuesday">
+            <label for="Tuesday">Tuesday</label>
+            <input type="checkbox" name="Wednesday" value="Wednesday">
+            <label for="Wednesday">Wednesday</label>
+            <input type="checkbox" name="Thursday" value="Thursday">
+            <label for="Thursday">Thursday</label>
+            <input type="checkbox" name="Friday" value="Friday">
+            <label for="Friday">Friday</label>
+            <input type="checkbox" name="Saturday" value="Saturday">
+            <label for="Saturday">Saturday</label>
+            <input type="checkbox" name="Sunday" value="Sunday">
+            <label for="Sunday">Sunday</label>
+            <br />
+            <label>First show</label>
+            <input type="time" />
+            <label>Last show</label>
+            <input type="time" />
+            <select id="Regurality">
+                <option value="Cinema">Monthly</option>
+                <option value="Cinema">Weekly</option>
+                <option value="Cinema">Daily</option>
+                <option value="Staduim">Hourly</option>
+                <option value="Airline">Bihourly</option>
+            </select>
+            <input type="submit" value="Add Event">
+        </form>
+    </div>
+</div>
