@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Checkout Page";
+}
+
+<div class="text-center">
+    <div class="form-group">
+        <h2>Checkout</h2>
+       <hr>
+    </div>
+    <h4>@ViewData["FullName"]</h4>
+    <div>
+        <form action="/ViewCart" method="post">
+        <select name="SeatType">
+            <option value="">Select Seat</option>
+            <option value="1">Gold Level</option>
+            <option value="2">Orange Level</option>
+            <option value="3">Blue Level</option>
+        </select>
+        </form>
+    </div>
+</div>

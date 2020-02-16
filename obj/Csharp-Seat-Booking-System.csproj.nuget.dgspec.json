@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bbdnet2202\\Documents\\Bootcamp\\C#\\Csharp-Seat-Booking-System\\Csharp-Seat-Booking-System.csproj": {}
+    "C:\\Users\\bbdnet2055\\Desktop\\Csharp-Seat-Booking-System\\Csharp-Seat-Booking-System.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bbdnet2202\\Documents\\Bootcamp\\C#\\Csharp-Seat-Booking-System\\Csharp-Seat-Booking-System.csproj": {
+    "C:\\Users\\bbdnet2055\\Desktop\\Csharp-Seat-Booking-System\\Csharp-Seat-Booking-System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bbdnet2202\\Documents\\Bootcamp\\C#\\Csharp-Seat-Booking-System\\Csharp-Seat-Booking-System.csproj",
+        "projectUniqueName": "C:\\Users\\bbdnet2055\\Desktop\\Csharp-Seat-Booking-System\\Csharp-Seat-Booking-System.csproj",
         "projectName": "Csharp-Seat-Booking-System",
-        "projectPath": "C:\\Users\\bbdnet2202\\Documents\\Bootcamp\\C#\\Csharp-Seat-Booking-System\\Csharp-Seat-Booking-System.csproj",
-        "packagesPath": "C:\\Users\\bbdnet2202\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bbdnet2202\\Documents\\Bootcamp\\C#\\Csharp-Seat-Booking-System\\obj\\",
+        "projectPath": "C:\\Users\\bbdnet2055\\Desktop\\Csharp-Seat-Booking-System\\Csharp-Seat-Booking-System.csproj",
+        "packagesPath": "C:\\Users\\bbdnet2055\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bbdnet2055\\Desktop\\Csharp-Seat-Booking-System\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\bbdnet2202\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bbdnet2055\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
