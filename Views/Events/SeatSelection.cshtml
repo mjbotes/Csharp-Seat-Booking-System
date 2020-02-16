@@ -31,6 +31,21 @@
             Scolor = "gold";
             break;
         }
-    <button style="position: absolute; left: @(SeatInArr.GetXCordinate() * 30)px; top: @(SeatInArr.GetYCordinate() * 40)px; width:30px; height: 30px; color: @Scolor"><i class="fas fa-chair"></i></button>
+        string id =  SeatInArr.ToElementId();
+    <button id=@id style="position: absolute; left: @(SeatInArr.GetXCordinate() * 30)px; top: @(SeatInArr.GetYCordinate() * 40)px; width:30px; height: 30px; color: @Scolor" onclick=AddSeat(@id)><i class="fas fa-chair"></i></button>
 }
 </div>
+
+<script>
+    var seats = [];
+    function AddSeat(seatId) {
+        if (seats.includes(seatId.id)) {
+            seats.filter(seatId.id);
+            seatId.style.color = "blue";
+        } else {
+                        seatId.style.color = "green";
+            seats.push(seatId.id);
+        }
+        console.log(seats);
+    }
+</script>

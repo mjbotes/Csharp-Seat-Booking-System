@@ -42,5 +42,10 @@ namespace Csharp_Seat_Booking_System.Models
         {
             return SeatCatergory + "\t" + SeatXCordinate + "\t" + SeatYCordinate;
         }
+
+        public string ToElementId()
+        {
+            return "R" + SeatXCordinate.ToString() + "S" + SeatYCordinate.ToString();
+        }
     }
 }
