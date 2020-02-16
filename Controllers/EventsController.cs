@@ -25,8 +25,16 @@ namespace Csharp_Seat_Booking_System.Controllers
             return View();
         }
 
-        public IActionResult BookSeat(){
+        public IActionResult SeatSelection(){
         //must be get to get the movie being booked
+           Venue CurrentVenue = new Venue("Test", "SeatTest.txt");
+            List<Seat> TestList = CurrentVenue.GetLayout();
+            foreach (Seat Test in TestList)
+            {
+                Console.Out.WriteLine(Test);
+            }
+            ViewData["arr"] = TestList;
+            return View();
         }
     }
 }

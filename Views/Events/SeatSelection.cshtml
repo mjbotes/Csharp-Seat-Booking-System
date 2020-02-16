@@ -1,10 +1,36 @@
+@using System;
+@using System.Collections.Generic;
+@using System.Diagnostics;
+@using System.Linq;
+@using System.Threading.Tasks;
+@using Microsoft.AspNetCore.Mvc;
+@using Microsoft.Extensions.Logging;
+@using Csharp_Seat_Booking_System.Models;
 @{
     ViewData["Title"] = "Seat Selection";
+    List<Seat> SeatArr = (List<Seat>)ViewData["arr"];
+
 }
 
 <h2>Book your seats.</h2>
 
-@foreach(Seat SeatInArr in SeatArr)
-{
-    <button ></button>
+<div style="position: relative">
+    @foreach(Seat SeatInArr in SeatArr)
+    {
+        string Scolor = "grey";
+        switch(SeatInArr.GetCatergory())
+        {
+        case 1:
+            Scolor = "blue";
+            break;
+        case 2:
+            Scolor = "orange";
+            break;
+        case 3:
+        default:
+            Scolor = "gold";
+            break;
+        }
+    <button style="position: absolute; left: @(SeatInArr.GetXCordinate() * 30)px; top: @(SeatInArr.GetYCordinate() * 40)px; width:30px; height: 30px; color: @Scolor"><i class="fas fa-chair"></i></button>
 }
+</div>

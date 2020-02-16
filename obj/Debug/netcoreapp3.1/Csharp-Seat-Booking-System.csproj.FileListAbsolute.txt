@@ -39,3 +39,8 @@ C:\Users\bbdnet2202\Documents\Bootcamp\C#\Csharp-Seat-Booking-System\obj\Debug\n
 C:\Users\bbdnet2202\Documents\Bootcamp\C#\Csharp-Seat-Booking-System\obj\Debug\netcoreapp3.1\Razor\Views\Events\ViewEvents.cshtml.g.cs
 C:\Users\bbdnet2202\Documents\Bootcamp\C#\Csharp-Seat-Booking-System\obj\Debug\netcoreapp3.1\Razor\Views\Events\AddEvent.cshtml.g.cs
 C:\Users\bbdnet2202\Documents\Bootcamp\C#\Csharp-Seat-Booking-System\obj\Debug\netcoreapp3.1\Razor\Views\Login\CompanyRegister.cshtml.g.cs
+C:\Users\bbdnet2202\Documents\Bootcamp\C#\Csharp-Seat-Booking-System\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\Checkout.cshtml.g.cs
+C:\Users\bbdnet2202\Documents\Bootcamp\C#\Csharp-Seat-Booking-System\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\PaymentFailed.cshtml.g.cs
+C:\Users\bbdnet2202\Documents\Bootcamp\C#\Csharp-Seat-Booking-System\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\PaymentSuccess.cshtml.g.cs
+C:\Users\bbdnet2202\Documents\Bootcamp\C#\Csharp-Seat-Booking-System\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\ViewCart.cshtml.g.cs
+C:\Users\bbdnet2202\Documents\Bootcamp\C#\Csharp-Seat-Booking-System\obj\Debug\netcoreapp3.1\Razor\Views\Events\SeatSelection.cshtml.g.cs

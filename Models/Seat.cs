@@ -7,7 +7,7 @@ namespace Csharp_Seat_Booking_System.Models
 {
     public class Seat
     {
-        public int SeatCatergory;
+        private int SeatCatergory;
         public int SeatXCordinate;
         public int SeatYCordinate;
 
@@ -16,11 +16,31 @@ namespace Csharp_Seat_Booking_System.Models
 
         }
 
+        public int GetXCordinate()
+        {
+            return SeatXCordinate;
+        }
+
+        public int GetYCordinate()
+        {
+            return SeatYCordinate;
+        }
+
+        public int GetCatergory()
+        {
+            return SeatCatergory;
+        }
+
         public Seat(int SeatCatergory, int SeatXCordinate, int SeatYCordinate)
         {
             this.SeatCatergory = SeatCatergory;
             this.SeatXCordinate = SeatXCordinate;
             this.SeatYCordinate = SeatYCordinate;
+        }
+        
+        public override string ToString()
+        {
+            return SeatCatergory + "\t" + SeatXCordinate + "\t" + SeatYCordinate;
         }
     }
 }
