@@ -3,44 +3,16 @@
 }
 
 <div class="text-center">
-    <div class="form-group">
+    <div>
         <span>
-            <i class='fas fa-shopping-cart' style='font-size:100px;color:black'></i>
-            <h2>View Cart</h2>
+            <i class='fas fa-shopping-cart far-left' style='font-size:100px;color:black'></i>
+            <h2 class="far-right">View Cart</h2>
         </span>
         <p>Will that be all for today?</p>
-
-        <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.FullName)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.FullName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.BookingDate)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.BookingDate)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.BookingTime)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.BookingTime)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.NumberOfSeats)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.NumberOfSeats)
-        </dd>
-         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-    </dl>
+        <table>
+            <td>
+                @* <h4>@ViewData["FullName"]</h4>
+                <h4>@ViewData["EventName"]</h4>
+         *@
     </div>
 </div>
