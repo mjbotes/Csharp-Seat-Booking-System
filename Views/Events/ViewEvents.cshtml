@@ -8,9 +8,9 @@
 @foreach (var EventHappening in Events)
 {
 <a>
-<div>
+<div class="btn btn-primary eventView" id="eventView">
 <img src=@EventHappening.ImgSrc />
-<h3>@EventHappening.EventName</h3>
+<h2>@EventHappening.EventName</h2>
 <p>@EventHappening.EventDescription</p>
 </div>
 </a>

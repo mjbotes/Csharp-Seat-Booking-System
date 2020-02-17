@@ -69,3 +69,27 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+.eventView {
+    display: grid;
+    grid-template-areas: "a b" "a c";
+    grid-template-columns: 20% 75%;
+    grid-template-rows: 30% 70%;
+    grid-gap: 5px;
+    height: 25%;
+    margin: 5px;
+}
+
+.eventView h2 {
+    font-size: 4rem;
+    grid-area: b;
+}
+
+.eventView img {
+    width: 100%;
+    grid-area: a;
+}
+
+.eventView p {
+    grid-area: c;
+}

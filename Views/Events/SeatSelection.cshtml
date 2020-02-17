@@ -34,18 +34,24 @@
         string id =  SeatInArr.ToElementId();
     <button id=@id style="position: absolute; left: @(SeatInArr.GetXCordinate() * 30)px; top: @(SeatInArr.GetYCordinate() * 40)px; width:30px; height: 30px; color: @Scolor" onclick=AddSeat(@id)><i class="fas fa-chair"></i></button>
 }
+    <button onclick=AddToCart() style="position:absolute; bottom:40px">Add to Cart</button>
 </div>
 
 <script>
     var seats = [];
     function AddSeat(seatId) {
         if (seats.includes(seatId.id)) {
-            seats.filter(seatId.id);
+            seats.splice(seats.indexOf(seatId.id), 1);
             seatId.style.color = "blue";
         } else {
-                        seatId.style.color = "green";
+            seatId.style.color = "green";
             seats.push(seatId.id);
         }
         console.log(seats);
+    }
+
+    function AddToCart() {
+        $.post("http://localhost:5001/Events/AddSeatsToCart", JSON.stringify(seats));
+
     }
 </script>
