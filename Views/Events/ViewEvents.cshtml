@@ -1,19 +1,11 @@
-@using Csharp_Seat_Booking_System.Models;
 @{
     ViewData["Title"] = "Events";
-    Event[] Events = (Event[])ViewData["Events"];
-    
-}
 
-@foreach (var EventHappening in Events)
-{
-<a>
-<div class="btn btn-primary eventView" id="eventView">
-<img src=@EventHappening.ImgSrc />
-<h2>@EventHappening.EventName</h2>
-<p>@EventHappening.EventDescription</p>
+}
+@using Csharp_Seat_Booking_System.Components;
+
+<div class="text-center">
+    <h1 class="display-4">Hello Shop</h1>
 </div>
-</a>
-}
-    </div>
-}
+
+@(await Html.RenderComponentAsync<EventList>(RenderMode.ServerPrerendered))

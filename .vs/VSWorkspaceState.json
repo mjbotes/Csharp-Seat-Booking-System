@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Controllers",
+    "\\Models",
+    "\\Services",
+    "\\Views",
+    "\\Views\\Events",
+    "\\Views\\Shared",
+    "\\wwwroot",
+    "\\wwwroot\\css",
+    "\\wwwroot\\data"
+  ],
+  "SelectedNode": "\\obj",
+  "PreviewInSolutionExplorer": false
+}

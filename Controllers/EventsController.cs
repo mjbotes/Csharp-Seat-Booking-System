@@ -6,19 +6,20 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Csharp_Seat_Booking_System.Models;
+using Csharp_Seat_Booking_System.Services;
 
 namespace Csharp_Seat_Booking_System.Controllers
 {
     public class EventsController : Controller
     {
-        public List<Event> EventList = new List<Event>();
+        public JsonFileProductService ProductService { get; }
+        public EventsController(JsonFileProductService  productService)
+        {
+            this.ProductService = productService;
+        }
 
         public IActionResult ViewEvents(){
-        EventList.Add(new Event("https://www.gstatic.com/tv/thumb/v22vodart/3542039/p3542039_v_v8_ac.jpg", "Avatar", "Its in IMAX"));
-        EventList.Add(new Event("https://lh3.googleusercontent.com/proxy/3CdejYgpHivKQgMH8mICvlDUEwluwy5fDbNnpFilOqcTIX72Yhc8CPm-iABdRzGS-80T091jqV3frPP9W8tRikb0nEJHkIDPxq1_", "Jexi", "Its in IMAX"));
-        EventList.Add(new Event("default", "Terminator", "Its in IMAX"));
-        ViewData["Events"] = EventList.ToArray();
-        return View();
+            return View();
         }
 
         public IActionResult AddEvent(){

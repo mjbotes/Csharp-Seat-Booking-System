@@ -1,0 +1,45 @@
+[
+  {
+    "Id": "avatarId",
+    "Maker": "emanana",
+    "Img": "https://cdn.europosters.eu/image/750webp/7182.webp",
+    "Url": "https://www.google.com/url?sa=i\u0026url=https%3A%2F%2Fwww.ukposters.co.uk%2Fposters%2Favatar-limited-ed-one-sheet-sun-v13494\u0026psig=AOvVaw0wpLNT_iST50P76HJUJ4Up\u0026ust=1582008851072000\u0026source=images\u0026cd=vfe\u0026ved=0CAIQjRxqFwoTCJjOp7CA2OcCFQAAAAAdAAAAABAJ",
+    "Title": "Avatar",
+    "Description": " description here",
+    "Ratings": [
+      5
+    ]
+  },
+  {
+    "Id": "I-will-be-back",
+    "Maker": "emanana",
+    "Img": "https://images-na.ssl-images-amazon.com/images/I/815qBTQWdnL._AC_SX385_.jpg",
+    "Url": "https://www.amazon.co.uk/Terminator-Dark-Fate-BD-Blu-ray/dp/B07YXGSQN6",
+    "Title": "The Teminator, the dark faith",
+    "Description": "Something about robots attacking mankind",
+    "Ratings": [
+      8
+    ]
+  },
+  {
+    "Id": "Gemini-man",
+    "Maker": "emanana",
+    "Img": "https://media.titanbooks.com/catalog/products/GeminiMan_art.jpg",
+    "Url": "",
+    "Title": "Gemini Man",
+    "Description": "turns out his fighting his clone",
+    "Ratings": [
+      4,
+      4
+    ]
+  },
+  {
+    "Id": "joker",
+    "Maker": "emanana",
+    "Img": "https://content.hungama.com/movie/display%20image/1280x800%20jpeg/6074703549.jpg",
+    "Url": "",
+    "Title": " Poor thing lost his mind",
+    "Description": "description here",
+    "Ratings": null
+  }
+]

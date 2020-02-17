@@ -44,3 +44,7 @@ C:\Users\bbdnet2202\Documents\Bootcamp\C#\Csharp-Seat-Booking-System\obj\Debug\n
 C:\Users\bbdnet2202\Documents\Bootcamp\C#\Csharp-Seat-Booking-System\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\PaymentSuccess.cshtml.g.cs
 C:\Users\bbdnet2202\Documents\Bootcamp\C#\Csharp-Seat-Booking-System\obj\Debug\netcoreapp3.1\Razor\Views\Checkout\ViewCart.cshtml.g.cs
 C:\Users\bbdnet2202\Documents\Bootcamp\C#\Csharp-Seat-Booking-System\obj\Debug\netcoreapp3.1\Razor\Views\Events\SeatSelection.cshtml.g.cs
+C:\Users\bbdnet2202\Documents\Bootcamp\C#\Csharp-Seat-Booking-System\obj\Debug\netcoreapp3.1\Csharp-Seat-Booking-System.RazorComponent.input.cache
+C:\Users\bbdnet2202\Documents\Bootcamp\C#\Csharp-Seat-Booking-System\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\EventList.razor.g.cs
+C:\Users\bbdnet2202\Documents\Bootcamp\C#\Csharp-Seat-Booking-System\obj\Debug\netcoreapp3.1\RazorDeclaration\Csharp-Seat-Booking-System.dll
+C:\Users\bbdnet2202\Documents\Bootcamp\C#\Csharp-Seat-Booking-System\obj\Debug\netcoreapp3.1\Razor\Components\EventList.razor.g.cs
