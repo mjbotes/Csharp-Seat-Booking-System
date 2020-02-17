@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bbdnet2202\\Documents\\Bootcamp\\C#\\Csharp-Seat-Booking-System\\Csharp-Seat-Booking-System.csproj": {}
+    "C:\\Users\\bbdnet2061\\Bootcamp\\C#\\Project\\Csharp-Seat-Booking-System\\Csharp-Seat-Booking-System.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bbdnet2202\\Documents\\Bootcamp\\C#\\Csharp-Seat-Booking-System\\Csharp-Seat-Booking-System.csproj": {
+    "C:\\Users\\bbdnet2061\\Bootcamp\\C#\\Project\\Csharp-Seat-Booking-System\\Csharp-Seat-Booking-System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bbdnet2202\\Documents\\Bootcamp\\C#\\Csharp-Seat-Booking-System\\Csharp-Seat-Booking-System.csproj",
+        "projectUniqueName": "C:\\Users\\bbdnet2061\\Bootcamp\\C#\\Project\\Csharp-Seat-Booking-System\\Csharp-Seat-Booking-System.csproj",
         "projectName": "Csharp-Seat-Booking-System",
-        "projectPath": "C:\\Users\\bbdnet2202\\Documents\\Bootcamp\\C#\\Csharp-Seat-Booking-System\\Csharp-Seat-Booking-System.csproj",
-        "packagesPath": "C:\\Users\\bbdnet2202\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bbdnet2202\\Documents\\Bootcamp\\C#\\Csharp-Seat-Booking-System\\obj\\",
+        "projectPath": "C:\\Users\\bbdnet2061\\Bootcamp\\C#\\Project\\Csharp-Seat-Booking-System\\Csharp-Seat-Booking-System.csproj",
+        "packagesPath": "C:\\Users\\bbdnet2061\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bbdnet2061\\Bootcamp\\C#\\Project\\Csharp-Seat-Booking-System\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\bbdnet2202\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\bbdnet2061\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -37,6 +41,42 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SQLite": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

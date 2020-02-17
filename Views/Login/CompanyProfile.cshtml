@@ -1,0 +1,32 @@
+@model CompanyProfileModel;
+
+@{
+    ViewData["Title"] = "Company Profile";
+}
+
+<div class="text-center">
+    <div class="form-group">
+        <h2>Update Information</h2>
+        <form method="post">
+             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CompanyName" class="control-label"></label>
+                <input asp-for="CompanyName" class="form-control" />
+                <span asp-validation-for="CompanyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyEvents" class="control-label"></label>
+                <input asp-for="CompanyEvents" class="form-control" />
+                <span asp-validation-for="CompanyEvents" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyVenuesAndSeats" class="control-label"></label>
+                <input asp-for="CompanyVenuesAndSeats" class="form-control" />
+                <span asp-validation-for="CompanyVenuesAndSeats" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Update" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
