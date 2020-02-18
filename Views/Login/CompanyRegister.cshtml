@@ -8,7 +8,7 @@
     <div class="form-group">
         <h2>Company Registeration</h2>
         <p>Register your company to start selling tickets.</p>
-        <form asp-action="CompanyRegister">
+        <form asp-action="CompanyRegister" asp-controller="Login">
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="CompanyName"></label>
@@ -30,7 +30,7 @@
                 <input asp-for="CompanyConfirmPassword" class="form-control" />
                 <span asp-validation-for="CompanyConfirmPassword" class="text-danger"></span>
             </div>
-            <input type="submit" value="Register" class="btn btn-sm btn-success text-uppercase rounded-0" />
+            <input type="submit" value="Register" class="btn btn-primary" />
         </form>
     </div>
 </div>  

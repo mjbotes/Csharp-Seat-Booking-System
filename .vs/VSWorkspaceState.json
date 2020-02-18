@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Views\\Login",
-    "\\Views\\Profile"
+    "\\Controllers",
+    "\\Models",
+    "\\Views",
+    "\\Views\\Login"
   ],
-  "SelectedNode": "\\Data",
+  "SelectedNode": "\\Views\\Login\\CompanyRegister.cshtml",
   "PreviewInSolutionExplorer": false
 }

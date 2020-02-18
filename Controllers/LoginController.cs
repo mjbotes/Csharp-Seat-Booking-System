@@ -11,18 +11,19 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using Csharp_Seat_Booking_System.Models;
+using Csharp_Seat_Booking_System.Data;
+using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Csharp_Seat_Booking_System.Controllers
 {
     public class LoginController : Controller
     {
 
-        private readonly UserManager<IdentityUser> userManager;  
-        private readonly SignInManager<IdentityUser> signInManager;  
+        private readonly CsharpSeatBookingSystemContext _businessUser;  
   
-        public LoginController(UserManager<IdentityUser> userManager,SignInManager<IdentityUser> signInManager){
-            this.userManager =userManager;  
-            this.signInManager = signInManager;
+        public LoginController(CsharpSeatBookingSystemContext businessUser)
+        {
+            _businessUser = businessUser;
         }
 
         public IActionResult Login(){
@@ -42,29 +43,18 @@ namespace Csharp_Seat_Booking_System.Controllers
             return View();
         }
 
-        [HttpPost]  
-        public async Task<IActionResult> CompanyRegister(CompanyRegisterModel model)  
-        {  
-            if (ModelState.IsValid)  
-            {  
-                var user = new IdentityUser   
-                {   
-                    UserName=model.CompanyName,  
-                    Email=model.CompanyEmail  
-                };  
-                var result = await userManager.CreateAsync(user, model.CompanyPassword);  
-  
-                if (result.Succeeded)  
-                {  
-                    await signInManager.SignInAsync(user, isPersistent: false);  
-                    return RedirectToAction("Index", "Home");  
-                }  
-                foreach (var error in result.Errors)  
-                {  
-                    ModelState.AddModelError("",error.Description);  
-                }  
-            }  
-            return View();  
+        [HttpPost, ValidateAntiForgeryToken]  
+        public IActionResult CompanyRegister(CompanyRegisterModel model)  
+        {
+            if(ModelState.IsValid)
+            {
+            _businessUser.Add(model);
+            _businessUser.SaveChanges();
+            ViewBag.message = "The User " + model.CompanyName + " Is Saved Successfully";
+             return RedirectToAction("ViewEvents", "Events");
+            }
+            return View();
+
         }
 
         public IActionResult CompanyProfile(){
