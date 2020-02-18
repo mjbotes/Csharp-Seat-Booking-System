@@ -1,169 +1,84 @@
+
 @{
     ViewData["Title"] = "Checkout Page";
 }
 
-<style>
-    body {
-	background: #ecf1f5;
-	font:14px "Open Sans", sans-serif; 
-	text-align:center;
-    /*justify-content: center;*/
-}
-
-.container-fluid{
-    width: 100%;
-}
-
-.tile{
-	/*width: 100%; */
-	background:#fff;
-	border-radius:5px;
-	box-shadow:0px 2px 3px -1px rgba(151, 171, 187, 0.7);
-	float:left;
-  	transform-style: preserve-3d;
-  	margin: 10px 5px;
-
-}
-
-.header{
-	border-bottom:1px solid #ebeff2;
-	padding:19px 0;
-	text-align:center;
-	color:#59687f;
-	font-size:600;
-	font-size:19px;	
-	position:relative;
-}
-
-.banner-img {
-	padding: 5px 5px 0;
-}
-
-.banner-img img {
-	width: 100%;
-	border-radius: 5px;
-}
-
-.dates{
-	border:1px solid #ebeff2;
-	border-radius:5px;
-	padding:20px 0px;
-	margin:10px 20px;
-	font-size:16px;
-	color:#5aadef;
-	font-weight:600;	
-	overflow:auto;
-}
-.dates div{
-	float:left;
-	width:50%;
-	text-align:center;
-	/*position:relative;*/
-}
-.dates strong,
-.stats strong{
-	display:block;
-	color:#adb8c2;
-	font-size:11px;
-	font-weight:700;
-}
-.dates span{
-	width:1px;
-	height:40px;
-	position:absolute;
-	right:0;
-	top:0;	
-	background:#ebeff2;
-}
-.stats{
-	border-top:1px solid #ebeff2;
-	background:#f7f8fa;
-	overflow:auto;
-	padding:15px 0;
-	font-size:16px;
-	color:#59687f;
-	font-weight:600;
-	border-radius: 0 0 5px 5px;
-}
-.stats div{
-	border-right:1px solid #ebeff2;
-	width: 33.33333%;
-	float:left;
-	text-align:center
-}
- 
-</style>
-<div class="text-center">
-    <div class="form-group">
-        <h2>Checkout</h2>
-       <hr>
-    </div>
-    <h4>@ViewData["FullName"]</h4>
+<center>
+<div>
     <div>
+        <h2>Checkout</h2>
+        <hr>
+
+    <h4 class="text-center">@ViewData["FullName"]</h4>
+  
         <br>
 
-        <form action="/ViewCart" method="post">         
-            <div class="container-fluid justify-content-center">
-            <div class="row">
+      <form>
+        <div class="row checkout-body" style="font:14px 'Open Sans', sans-serif; text-align:center; width: 100vh; border:1px solid #ebeff2;">
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                <div class="tile">
+                <div class="tile" style=" background:#fff; border-radius:5px; margin: 1px 1px 3px 3px; height: 50vh; width: 90vh;">
                     <div class="wrapper">
-                        <div class="header">
+                        <div class="header text-center" style="width: 90vh; border-bottom:1px solid #ebeff2; padding:19px 0; text-align:center; color:#59687f; font-weight:600; font-size:19px;	">
                             @ViewData["EventName"]
                         </div>
-
-                        <div class="banner-img">
-                            <img src="..\wwwroot\QandS.jpg" alt="Image 1">
+                        <div class="dates" style="width: 90vh; padding:19px 0 30px 0; margin:10px 20px 10px 20px; border:1px solid #ebeff2; font-size:16px; color:#59687f; font-weight:600; overflow:auto;">
+                            <div class="BookingDate" style="float:left; width:50%; text-align:center; position:relative;">
+                                <strong style="display:block; color:#adb8c2; font-size:14px; font-weight:700;">
+                                    DATE: 
+                                </strong>
+                                     @ViewData["BookingDate"]
+                                <span style="width:20px; height:40px; position:absolute; right:0; top:0;"></span>
+                            </div>
+                            <div class="BookingTime" style="float:left; width:50%; text-align:center; position:relative;">
+                                <strong style="display:block; color:#adb8c2; font-size:14px; font-weight:700;">
+                                    TIME: 
+                                </strong> 
+                                    @ViewData["BookingTime"]
+                            </div>
                         </div>
-
-                        <div class="dates">
-                            <div class="BookingDate">
-                                <strong>DATE </strong> @ViewData["BookingDate"] 
-                                <span></span>
+                        <div class="seats" style="float: left; width: 90vh; overflow:auto;">
+                            <div class="goldSeat" style="width: 30vh; float:left; text-align:center; padding:15px 0 30px 0; border-right:1px solid #ebeff2;">
+                                <strong style="color: gold; font-size:14px;">
+                                    GOLD
+                                </strong> 
+                                    @ViewData["SeatCategoryGoldPrice"]
                             </div>
-                            <div class="BookingTime">
-                                <strong>ENDS</strong> @ViewData["BookingTime"]
+                            <div class="orangeSeat" style="width: 30vh; float:left; text-align:center; padding:15px 0 30px 0; border-right:1px solid #ebeff2;">
+                                <strong style="color: orange; font-size:14px;">
+                                    ORANGE
+                                </strong> 
+                                    @ViewData["SeatCategoryOrangePrice"]
                             </div>
-                        </div>
-                         <div class="stats">
-
-                            <div>
-                                <strong>GOLD</strong> @ViewData["SeatCategoryGoldPrice"]
-                            </div>
-
-                            <div>
-                                <strong>ORANGE</strong> @ViewData["SeatCategoryOrangePrice"]
-                            </div>
-
-                            <div>
-                                <strong>BLUE</strong> @ViewData["SeatCategoryBluePrice"]
-                            </div>
-
-                        </div>
-                           <div class="stats">
-
-                            <div>
-                                <strong>No. of Gold Seats</strong> 5
-                            </div>
-
-                            <div>
-                                <strong>No. of Orange Seats</strong> 3
-                            </div>
-
-                            <div>
-                                <strong>No. of Blue Seats</strong> 13
+                            <div class="blueSeat" style="width: 30vh; float:left; text-align:center; padding:15px 0 30px 0; border-right: none;">
+                                <strong style="color: aqua; font-size:14px;">
+                                    BLUE
+                                </strong> 
+                                    @ViewData["SeatCategoryBluePrice"]
                             </div>
 
                         </div>
+                        <div class="seatNumber" style="float:left; width: 91vh;">
 
+                            <div class="goldSeat" style="border-right:1px solid #ebeff2; margin-left: 0; width: 30vh; float:left; text-align:center; padding:15px 0 30px 0; background:#f7f8fa; overflow:auto; font-size:16px; color:#59687f; font-weight:600; ">
+                                <strong>Number of Seats</strong> 5
+                            </div>
+
+                            <div class="orangeSeat" style="border-right:1px solid #ebeff2;  margin-left: 0; width: 30vh; float:left; text-align:center; padding:15px 0 30px 0; background:#f7f8fa; overflow:auto; font-size:16px; color:#59687f; font-weight:600;">
+                                <strong>Number of Seats</strong> 3
+                            </div>
+
+                            <div class="blueSeat" style="border-right: none;  margin-left: 0; width: 30vh; float:left; text-align:center; padding:15px 0 30px 0; background:#f7f8fa; overflow:auto; font-size:16px; color:#59687f; font-weight:600;">
+                                <strong>Number of Seats</strong> 13
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="footer">
-                            <a href="#" class="Cbtn Cbtn-primary">View</a>
-                            <a href="#" class="Cbtn Cbtn-danger">Delete</a>
-                        </div>
-                </div> 
-            </div>
-        </form>
-       
+                </div>
+                <div class="checkout-footer" style=" margin: 1px 0px 1px 0px; padding: 0px 0px 20px 0px; text-align:center;">
+                    <input class="checkout-button" type="button" style="width: 120px; height: 30px; font-weight: 700; " onclick="window.location.href = 'https://localhost:5001/Checkout/ViewCart';" value="Checkout" />
+                </div>
+           </div>
+       </form>
     </div>
 </div>
+</center>
