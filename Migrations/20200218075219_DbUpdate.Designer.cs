@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Csharp_Seat_Booking_System.Migrations
 {
     [DbContext(typeof(CsharpSeatBookingSystemContext))]
-    [Migration("20200218063225_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20200218075219_DbUpdate")]
+    partial class DbUpdate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -45,7 +45,35 @@ namespace Csharp_Seat_Booking_System.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("User");
+                    b.ToTable("BusinessUser");
+                });
+
+            modelBuilder.Entity("Csharp_Seat_Booking_System.Models.UserRegisterModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("UserConfirmPassword")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserPassword")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RegularUser");
                 });
 #pragma warning restore 612, 618
         }

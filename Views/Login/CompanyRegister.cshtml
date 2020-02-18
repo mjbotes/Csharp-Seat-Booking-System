@@ -6,7 +6,7 @@
 
 <div class="text-center">
     <div class="form-group">
-        <h2>Company Registeration</h2>
+        <h2>Company Registration</h2>
         <p>Register your company to start selling tickets.</p>
         <form asp-action="CompanyRegister" asp-controller="Login">
             <div asp-validation-summary="All" class="text-danger"></div>
@@ -14,6 +14,11 @@
                 <label asp-for="CompanyName"></label>
                 <input asp-for="CompanyName" class="form-control" />
                 <span asp-validation-for="CompanyName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyPhoneNumber"></label>
+                <input asp-for="CompanyPhoneNumber" class="form-control" />
+                <span asp-validation-for="CompanyPhoneNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="CompanyEmail"></label>
@@ -32,5 +37,7 @@
             </div>
             <input type="submit" value="Register" class="btn btn-primary" />
         </form>
+        <br>
+        <b style = "color: red;">@ViewBag.message</b>
     </div>
 </div>  

@@ -13,23 +13,29 @@ namespace Csharp_Seat_Booking_System.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Please insert Company Name")]
+        [Required(ErrorMessage = "Please Enter Company Name")]
         [Display(Name = "Company Name")]
         public string CompanyName { get; set; }
 
-        [Required(ErrorMessage = "Please insert Company Email")]
+        [Required(ErrorMessage = "Please Enter Company Phone Number")]
+        [StringLength(10,MinimumLength = 10)]
+        [Display(Name = "Phone Number")]
+        public string CompanyPhoneNumber { get; set; }
+        
+        [Required(ErrorMessage = "Please Enter Company Email")]
         [EmailAddress]
         [Display(Name = "Company Email")]
         public string CompanyEmail { get; set; }
 
-        [Required(ErrorMessage = "Please insert Password")]
+
+        [DataType(DataType.Password, ErrorMessage = "Password Format is incorrect")]
+        [Required(ErrorMessage = "Please Enter Password")]
         [Display(Name = "Password")]
-        [DataType(DataType.Password)]
         public string CompanyPassword { get; set; }
 
+        [DataType(DataType.Password)]
         [Required(ErrorMessage = "Please confirm password")]
         [Display(Name = "Confirm Password")]
-        [DataType(DataType.Password)]
         [Compare("CompanyPassword", ErrorMessage = "Passwords do not match.")]
         public string CompanyConfirmPassword { get; set; }
 

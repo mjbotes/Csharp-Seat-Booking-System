@@ -1,11 +1,48 @@
+@model UserRegisterModel;
+
 @{
-    ViewData["Title"] = "Registeration";
+    ViewData["Title"] = "Registration";
 }
 
 <div class="text-center">
     <div class="form-group">
-        <h2>User Registeration</h2>
-        <p>Register with your information to start booking tickets.</p>
-        
+        <h2>User Registration</h2>
+        <p>Register now to book a ticket!</p>
+        <form asp-action="UserRegister" asp-controller="Login">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="UserName"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserFirstName"></label>
+                <input asp-for="UserFirstName" class="form-control" />
+                <span asp-validation-for="UserFirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserLastName"></label>
+                <input asp-for="UserLastName" class="form-control" />
+                <span asp-validation-for="UserLastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserEmail"></label>
+                <input asp-for="UserEmail" class="form-control" />
+                <span asp-validation-for="UserEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserPassword"></label>
+                <input asp-for="UserPassword" class="form-control" />
+                <span asp-validation-for="UserPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserConfirmPassword"></label>
+                <input asp-for="UserConfirmPassword" class="form-control" />
+                <span asp-validation-for="UserConfirmPassword" class="text-danger"></span>
+            </div>
+            <input type="submit" value="Register" class="btn btn-primary" />
+        </form> 
+        <br>
+        <b style = "color: red;">@ViewBag.message</b>
     </div>
-</div>
+</div>  

@@ -10,7 +10,9 @@ namespace Csharp_Seat_Booking_System.Data
         {
         }
 
-        public DbSet<CompanyRegisterModel> User { get; set; }
+        public DbSet<CompanyRegisterModel> BusinessUser { get; set; }
+
+        public DbSet<UserRegisterModel> RegularUser { get; set; }
     }
 }
 

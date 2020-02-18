@@ -20586,6 +20586,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\bbdnet2061\\Bootcamp\\C#\\Project\\Csharp-Seat-Booking-System\\Views\\Login\\UserLogin.cshtml",
+      "TargetPath": "Views\\Login\\UserLogin.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\bbdnet2061\\Bootcamp\\C#\\Project\\Csharp-Seat-Booking-System\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
