@@ -26,8 +26,15 @@ using Csharp_Seat_Booking_System.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\bbdnet2061\Bootcamp\C#\Project\Csharp-Seat-Booking-System\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f398752ecf6ddf2249e581db2ba9fb0570d366d1", @"/Views/Login/Login.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"694bf7a6a29d5b942a6a5243e7bee4ed444b7dd3", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3549b3b905540b4768067e0371bbc018e613e919", @"/Views/_ViewImports.cshtml")]
     public class Views_Login_Login : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("nav-link text-dark"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -68,7 +75,7 @@ using Csharp_Seat_Booking_System.Models;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<div class=\"text-center\">\r\n    <div class=\"form-group\">\r\n        <h2>User Login</h2>\r\n        <p>Login to your user or business account</p>\r\n\r\n    </div>\r\n</div>\r\n\r\n<div class=\"text-center\">\r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f398752ecf6ddf2249e581db2ba9fb0570d366d15138", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f398752ecf6ddf2249e581db2ba9fb0570d366d15349", async() => {
                 WriteLiteral("<i class=\"fas fa-user-plus\"></i>Login as a User");
             }
             );
@@ -89,7 +96,7 @@ using Csharp_Seat_Booking_System.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f398752ecf6ddf2249e581db2ba9fb0570d366d16830", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f398752ecf6ddf2249e581db2ba9fb0570d366d17041", async() => {
                 WriteLiteral("<i class=\"fas fa-briefcase\"></i>Login as a Buisness");
             }
             );

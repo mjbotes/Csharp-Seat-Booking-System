@@ -20,18 +20,28 @@ namespace Csharp_Seat_Booking_System.Controllers
     public class LoginController : Controller
     {
 
-        private readonly CsharpSeatBookingSystemContext Database;  
-        private readonly SignInManager<IdentityUser> SignInManager;
+        // private readonly CsharpSeatBookingSystemContext Database;  
+        private readonly SignInManager<IdentityUser> signInManager;
+        private readonly UserManager<IdentityUser> userManager;
+
   
-        public LoginController(CsharpSeatBookingSystemContext Database, SignInManager<IdentityUser> SignInManager)
+        public LoginController(/*CsharpSeatBookingSystemContext Database,*/ UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
         {
-            this.Database = Database;
-            this.SignInManager = SignInManager;
+            // this.Database = Database;
+            this.userManager = userManager;
+            this.signInManager = signInManager;
         }
 
-        // [HttpGet]
+        
         public IActionResult Login(){
             return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await signInManager.SignOutAsync();
+            return RedirectToAction("ViewEvents", "Events");
         }
 
         [HttpGet]
@@ -40,19 +50,19 @@ namespace Csharp_Seat_Booking_System.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> UserLogin(UserLoginModel model)
         {
             if(ModelState.IsValid)
             {
-                var result = await SignInManager.PasswordSignInAsync(model.UserEmail, model.UserPassword, false, false);
+                // signInManager.
+                var result = await signInManager.PasswordSignInAsync(model.UserEmail, model.UserPassword, false, false);
 
                 if(result.Succeeded)
                 {
                     return RedirectToAction("ViewEvents", "Events");
                 }
 
-                    ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
+                ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
                 
 
             }
@@ -73,21 +83,31 @@ namespace Csharp_Seat_Booking_System.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult UserRegister(UserRegisterModel model){
-            try{
-                if(ModelState.IsValid)
-                {
-                    this.Database.Add(model);
-                    this.Database.SaveChanges();
+        public async Task<IActionResult> UserRegister(UserRegisterModel model){
+
+            if(ModelState.IsValid)
+            {
+                // this.Database.Add(model);
+                // this.Database.SaveChanges();
+                // return RedirectToAction("ViewEvents", "Events");
+                var user = new IdentityUser{
+                    UserName = model.UserName,
+                    Email = model.UserEmail
+                };
+                var createdUser = await userManager.CreateAsync(user, model.UserPassword);
+
+                if(createdUser.Succeeded){
+                    await signInManager.SignInAsync(user, isPersistent :false);
                     return RedirectToAction("ViewEvents", "Events");
                 }
-            }
-            catch(Exception error){
-                ViewBag.message = error.Message;
-                return View();
-            }
 
-            return View();
+                foreach(var error in createdUser.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+            }
+            return View(model);
+            
         }
 
         [HttpGet]
@@ -104,9 +124,9 @@ namespace Csharp_Seat_Booking_System.Controllers
 
                 if(ModelState.IsValid)
                 {
-                    this.Database.Add(model);
-                    this.Database.SaveChanges();
-                    return RedirectToAction("ViewEvents", "Events");
+                    // this.Database.Add(model);
+                    // this.Database.SaveChanges();
+                    // return RedirectToAction("ViewEvents", "Events");
                 }
             }
             catch(Exception error)

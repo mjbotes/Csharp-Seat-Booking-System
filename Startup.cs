@@ -60,7 +60,7 @@ namespace Csharp_Seat_Booking_System
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseAuthentication();
             app.UseRouting();
 
             app.UseAuthorization();

@@ -26,8 +26,15 @@ using Csharp_Seat_Booking_System.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\bbdnet2061\Bootcamp\C#\Project\Csharp-Seat-Booking-System\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"40318c3dbf1ab32a158113f283966aa01d6d2f97", @"/Views/Events/AddEvent.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"694bf7a6a29d5b942a6a5243e7bee4ed444b7dd3", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3549b3b905540b4768067e0371bbc018e613e919", @"/Views/_ViewImports.cshtml")]
     public class Views_Events_AddEvent : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("value", "Cinema", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -68,7 +75,7 @@ using Csharp_Seat_Booking_System.Models;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n<div class=\"text-center\">\r\n    <div class=\"form-group\">\r\n        <h2>User Registeration</h2>\r\n        <p>Register your company to start selling tickets.</p>\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40318c3dbf1ab32a158113f283966aa01d6d2f974729", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40318c3dbf1ab32a158113f283966aa01d6d2f974940", async() => {
                 WriteLiteral(@"
             <label>Upload Movie Poster</label>
             <input type=""file"" />
@@ -78,7 +85,7 @@ using Csharp_Seat_Booking_System.Models;
             <label>Event Type</label>
             <select id=""type"">
                 ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40318c3dbf1ab32a158113f283966aa01d6d2f975304", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40318c3dbf1ab32a158113f283966aa01d6d2f975515", async() => {
                     WriteLiteral("Comedy");
                 }
                 );
@@ -94,7 +101,7 @@ using Csharp_Seat_Booking_System.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40318c3dbf1ab32a158113f283966aa01d6d2f976543", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40318c3dbf1ab32a158113f283966aa01d6d2f976754", async() => {
                     WriteLiteral("Romcom");
                 }
                 );
@@ -110,7 +117,7 @@ using Csharp_Seat_Booking_System.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40318c3dbf1ab32a158113f283966aa01d6d2f977782", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40318c3dbf1ab32a158113f283966aa01d6d2f977993", async() => {
                     WriteLiteral("Thriller");
                 }
                 );
@@ -157,7 +164,7 @@ using Csharp_Seat_Booking_System.Models;
             <input type=""time"" />
             <select id=""Regurality"">
                 ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40318c3dbf1ab32a158113f283966aa01d6d2f9710490", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40318c3dbf1ab32a158113f283966aa01d6d2f9710701", async() => {
                     WriteLiteral("Monthly");
                 }
                 );
@@ -173,7 +180,7 @@ using Csharp_Seat_Booking_System.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40318c3dbf1ab32a158113f283966aa01d6d2f9711731", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40318c3dbf1ab32a158113f283966aa01d6d2f9711942", async() => {
                     WriteLiteral("Weekly");
                 }
                 );
@@ -189,7 +196,7 @@ using Csharp_Seat_Booking_System.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40318c3dbf1ab32a158113f283966aa01d6d2f9712971", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40318c3dbf1ab32a158113f283966aa01d6d2f9713182", async() => {
                     WriteLiteral("Daily");
                 }
                 );
@@ -205,7 +212,7 @@ using Csharp_Seat_Booking_System.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40318c3dbf1ab32a158113f283966aa01d6d2f9714210", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40318c3dbf1ab32a158113f283966aa01d6d2f9714421", async() => {
                     WriteLiteral("Hourly");
                 }
                 );
@@ -221,7 +228,7 @@ using Csharp_Seat_Booking_System.Models;
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n                ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40318c3dbf1ab32a158113f283966aa01d6d2f9715450", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "40318c3dbf1ab32a158113f283966aa01d6d2f9715661", async() => {
                     WriteLiteral("Bihourly");
                 }
                 );

@@ -17,14 +17,6 @@ namespace Csharp_Seat_Booking_System.Models
         [Display(Name = "User Name")]
         public string UserName { get; set; }
 
-        [Required(ErrorMessage = "Please Enter First Name")]
-        [Display(Name = "First Name")]
-        public string UserFirstName { get; set; }
-        
-        [Required(ErrorMessage = "Please Enter Last Name")]
-        [Display(Name = "Last Name")]
-        public string UserLastName { get; set; }
-
         [Required(ErrorMessage = "Please Enter Email")]
         [EmailAddress]
         [Display(Name = "Email")]
