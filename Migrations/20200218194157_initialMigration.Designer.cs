@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Csharp_Seat_Booking_System.Migrations
 {
     [DbContext(typeof(CsharpSeatBookingSystemContext))]
-    [Migration("20200218173931_initialMigration")]
+    [Migration("20200218194157_initialMigration")]
     partial class initialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,39 +20,6 @@ namespace Csharp_Seat_Booking_System.Migrations
                 .HasAnnotation("ProductVersion", "3.1.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("Csharp_Seat_Booking_System.Models.CompanyRegisterModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CompanyConfirmPassword")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CompanyEmail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CompanyName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CompanyPassword")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CompanyPhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(10)")
-                        .HasMaxLength(10);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("BusinessUser");
-                });
 
             modelBuilder.Entity("Csharp_Seat_Booking_System.Models.UserRegisterModel", b =>
                 {
@@ -69,17 +36,13 @@ namespace Csharp_Seat_Booking_System.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("UserPassword")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("RegularUser");
+                    b.ToTable("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

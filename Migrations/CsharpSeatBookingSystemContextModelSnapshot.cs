@@ -19,39 +19,6 @@ namespace Csharp_Seat_Booking_System.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Csharp_Seat_Booking_System.Models.CompanyRegisterModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CompanyConfirmPassword")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CompanyEmail")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CompanyName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CompanyPassword")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CompanyPhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(10)")
-                        .HasMaxLength(10);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("BusinessUser");
-                });
-
             modelBuilder.Entity("Csharp_Seat_Booking_System.Models.UserRegisterModel", b =>
                 {
                     b.Property<int>("Id")
@@ -67,17 +34,13 @@ namespace Csharp_Seat_Booking_System.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("UserPassword")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("RegularUser");
+                    b.ToTable("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

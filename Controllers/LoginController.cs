@@ -19,22 +19,17 @@ namespace Csharp_Seat_Booking_System.Controllers
 {
     public class LoginController : Controller
     {
-
-        // private readonly CsharpSeatBookingSystemContext Database;  
+        private const bool IsPersistent = false;  
         private readonly SignInManager<IdentityUser> signInManager;
         private readonly UserManager<IdentityUser> userManager;
 
   
-        public LoginController(/*CsharpSeatBookingSystemContext Database,*/ UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+        public LoginController( UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
         {
-            // this.Database = Database;
+
             this.userManager = userManager;
             this.signInManager = signInManager;
-        }
 
-        
-        public IActionResult Login(){
-            return View();
         }
 
         [HttpPost]
@@ -42,33 +37,73 @@ namespace Csharp_Seat_Booking_System.Controllers
         {
             await signInManager.SignOutAsync();
             return RedirectToAction("ViewEvents", "Events");
+
+        }
+        
+        public IActionResult Login(){
+
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult CompanyLogin(){
+
+            return View();
+
         }
 
         [HttpGet]
         public IActionResult UserLogin(){
+
             return View();
+
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> UserLogin(UserLoginModel model)
         {
             if(ModelState.IsValid)
             {
-                // signInManager.
-                var result = await signInManager.PasswordSignInAsync(model.UserEmail, model.UserPassword, false, false);
+                var result = await signInManager.PasswordSignInAsync(model.UserEmail, model.UserPassword, IsPersistent, false);
 
                 if(result.Succeeded)
                 {
+
                     return RedirectToAction("ViewEvents", "Events");
+
                 }
 
                 ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
                 
 
             }
+
             return View(model);
 
-            
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CompanyLogin(UserLoginModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                var result = await signInManager.PasswordSignInAsync(model.UserEmail, model.UserPassword, IsPersistent, false);
+
+                if(result.Succeeded)
+                {
+
+                    return RedirectToAction("ViewEvents", "Events");
+
+                }
+
+                ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
+                
+
+            }
+
+            return View(model);
 
         }
 
@@ -78,7 +113,9 @@ namespace Csharp_Seat_Booking_System.Controllers
 
         [HttpGet]
         public IActionResult UserRegister(){
+
             return View();
+
         }
 
         [HttpPost]
@@ -87,60 +124,65 @@ namespace Csharp_Seat_Booking_System.Controllers
 
             if(ModelState.IsValid)
             {
-                // this.Database.Add(model);
-                // this.Database.SaveChanges();
-                // return RedirectToAction("ViewEvents", "Events");
-                var user = new IdentityUser{
-                    UserName = model.UserName,
-                    Email = model.UserEmail
-                };
+
+                var user = new IdentityUser{UserName = model.UserEmail};
                 var createdUser = await userManager.CreateAsync(user, model.UserPassword);
 
-                if(createdUser.Succeeded){
+                if(createdUser.Succeeded)
+                {
+
                     await signInManager.SignInAsync(user, isPersistent :false);
                     return RedirectToAction("ViewEvents", "Events");
+
                 }
 
                 foreach(var error in createdUser.Errors)
                 {
+
                     ModelState.AddModelError(string.Empty, error.Description);
+
                 }
             }
+            
             return View(model);
             
         }
 
         [HttpGet]
         public IActionResult CompanyRegister(){
+
             return View();
+
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]  
-        public IActionResult CompanyRegister(CompanyRegisterModel model)  
-        {
-            try
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CompanyRegister(UserRegisterModel model){
+
+            if(ModelState.IsValid)
             {
 
-                if(ModelState.IsValid)
+                var user = new IdentityUser{UserName = model.UserEmail};
+                var createdUser = await userManager.CreateAsync(user, model.UserPassword);
+
+                if(createdUser.Succeeded)
                 {
-                    // this.Database.Add(model);
-                    // this.Database.SaveChanges();
-                    // return RedirectToAction("ViewEvents", "Events");
+
+                    await signInManager.SignInAsync(user, isPersistent :false);
+                    return RedirectToAction("ViewEvents", "Events");
+
+                }
+
+                foreach(var error in createdUser.Errors)
+                {
+
+                    ModelState.AddModelError(string.Empty, error.Description);
+
                 }
             }
-            catch(Exception error)
-            {
-                ViewBag.message = error.Message;
-                return View();
-            }
-            return View();
-
+            
+            return View(model);
+            
         }
-
-        public IActionResult CompanyProfile(){
-            return View();
-        }
-        
     }
 }

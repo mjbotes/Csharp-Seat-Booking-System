@@ -33,7 +33,7 @@ namespace Csharp_Seat_Booking_System
 
         services.AddIdentity<IdentityUser, IdentityRole>(options =>
         {
-            options.User.RequireUniqueEmail = false;
+            // options.User.RequireUniqueEmail = false;
         })
         .AddEntityFrameworkStores<Csharp_Seat_Booking_System.Data.CsharpSeatBookingSystemContext>()
         .AddDefaultTokenProviders(); 
@@ -60,9 +60,10 @@ namespace Csharp_Seat_Booking_System
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseAuthentication();
+            
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

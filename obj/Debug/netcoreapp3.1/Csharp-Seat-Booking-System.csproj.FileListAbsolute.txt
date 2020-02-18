@@ -227,5 +227,5 @@ C:\Users\bbdnet2061\Bootcamp\C#\Project\Csharp-Seat-Booking-System\bin\Debug\net
 C:\Users\bbdnet2061\Bootcamp\C#\Project\Csharp-Seat-Booking-System\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\bbdnet2061\Bootcamp\C#\Project\Csharp-Seat-Booking-System\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\bbdnet2061\Bootcamp\C#\Project\Csharp-Seat-Booking-System\obj\Debug\netcoreapp3.1\Csharp-Seat-Booking-System.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\bbdnet2061\Bootcamp\C#\Project\Csharp-Seat-Booking-System\obj\Debug\netcoreapp3.1\Razor\Views\Login\CompanyProfile.cshtml.g.cs
 C:\Users\bbdnet2061\Bootcamp\C#\Project\Csharp-Seat-Booking-System\obj\Debug\netcoreapp3.1\Razor\Views\Login\UserLogin.cshtml.g.cs
+C:\Users\bbdnet2061\Bootcamp\C#\Project\Csharp-Seat-Booking-System\obj\Debug\netcoreapp3.1\Razor\Views\Login\CompanyLogin.cshtml.g.cs

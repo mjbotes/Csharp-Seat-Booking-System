@@ -11,16 +11,6 @@
         <form asp-action="CompanyRegister" asp-controller="Login">
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="CompanyName"></label>
-                <input asp-for="CompanyName" class="form-control" />
-                <span asp-validation-for="CompanyName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CompanyPhoneNumber"></label>
-                <input asp-for="CompanyPhoneNumber" class="form-control" />
-                <span asp-validation-for="CompanyPhoneNumber" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="CompanyEmail"></label>
                 <input asp-for="CompanyEmail" class="form-control" />
                 <span asp-validation-for="CompanyEmail" class="text-danger"></span>
@@ -38,6 +28,5 @@
             <input type="submit" value="Register" class="btn btn-primary" />
         </form>
         <br>
-        <b style = "color: red;">@ViewBag.message</b>
     </div>
 </div>  

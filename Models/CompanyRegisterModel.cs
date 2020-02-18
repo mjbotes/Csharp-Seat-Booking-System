@@ -12,15 +12,6 @@ namespace Csharp_Seat_Booking_System.Models
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-
-        [Required(ErrorMessage = "Please Enter Company Name")]
-        [Display(Name = "Company Name")]
-        public string CompanyName { get; set; }
-
-        [Required(ErrorMessage = "Please Enter Company Phone Number")]
-        [StringLength(10,MinimumLength = 10)]
-        [Display(Name = "Phone Number")]
-        public string CompanyPhoneNumber { get; set; }
         
         [Required(ErrorMessage = "Please Enter Company Email")]
         [EmailAddress]

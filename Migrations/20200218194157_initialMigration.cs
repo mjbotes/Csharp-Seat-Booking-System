@@ -47,36 +47,18 @@ namespace Csharp_Seat_Booking_System.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "BusinessUser",
+                name: "User",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    CompanyName = table.Column<string>(nullable: false),
-                    CompanyPhoneNumber = table.Column<string>(maxLength: 10, nullable: false),
-                    CompanyEmail = table.Column<string>(nullable: false),
-                    CompanyPassword = table.Column<string>(nullable: false),
-                    CompanyConfirmPassword = table.Column<string>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_BusinessUser", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "RegularUser",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    UserName = table.Column<string>(nullable: false),
                     UserEmail = table.Column<string>(nullable: false),
                     UserPassword = table.Column<string>(nullable: false),
                     UserConfirmPassword = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_RegularUser", x => x.Id);
+                    table.PrimaryKey("PK_User", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -243,10 +225,7 @@ namespace Csharp_Seat_Booking_System.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "BusinessUser");
-
-            migrationBuilder.DropTable(
-                name: "RegularUser");
+                name: "User");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

@@ -13,10 +13,6 @@ namespace Csharp_Seat_Booking_System.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Please Enter Username")]
-        [Display(Name = "User Name")]
-        public string UserName { get; set; }
-
         [Required(ErrorMessage = "Please Enter Email")]
         [EmailAddress]
         [Display(Name = "Email")]

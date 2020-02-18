@@ -20536,11 +20536,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\bbdnet2061\\Bootcamp\\C#\\Project\\Csharp-Seat-Booking-System\\Views\\Login\\CompanyProfile.cshtml",
-      "TargetPath": "Views\\Login\\CompanyProfile.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\bbdnet2061\\Bootcamp\\C#\\Project\\Csharp-Seat-Booking-System\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -20553,6 +20548,11 @@
     {
       "FilePath": "c:\\Users\\bbdnet2061\\Bootcamp\\C#\\Project\\Csharp-Seat-Booking-System\\Views\\Events\\AddEvent.cshtml",
       "TargetPath": "Views\\Events\\AddEvent.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\bbdnet2061\\Bootcamp\\C#\\Project\\Csharp-Seat-Booking-System\\Views\\Login\\CompanyLogin.cshtml",
+      "TargetPath": "Views\\Login\\CompanyLogin.cshtml",
       "FileKind": "mvc"
     },
     {
