@@ -1,0 +1,83 @@
+@{
+    ViewData["Title"] = "Checkout Page";
+}
+
+<center>
+<div>
+    <div>
+        <h2 class="display-4">Checkout</h2>
+        <hr>
+
+    <h4 class="text-center">@User.Identity.Name</h4>
+  
+        <br>
+
+      <form>
+        <div class="row checkout-body" style="font:14px 'Open Sans', sans-serif; text-align:center; width: 100vh; border:1px solid #ebeff2;">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="tile" style=" background:#fff; border-radius:5px; margin: 1px 1px 3px 3px; height: 50vh; width: 90vh;">
+                    <div class="wrapper">
+                        <div class="header text-center" style="width: 90vh; border-bottom:1px solid #ebeff2; padding:19px 0; text-align:center; color:#59687f; font-weight:600; font-size:19px;	">
+                            @ViewData["EventName"]
+                        </div>
+                        <div class="dates" style="width: 90vh; padding:19px 0 30px 0; margin:10px 20px 10px 20px; border:1px solid #ebeff2; font-size:16px; color:#59687f; font-weight:600; overflow:auto;">
+                            <div class="BookingDate" style="float:left; width:50%; text-align:center; position:relative;">
+                                <strong style="display:block; color:#adb8c2; font-size:14px; font-weight:700;">
+                                    DATE: 
+                                </strong>
+                                     @ViewData["BookingDate"]
+                                <span style="width:20px; height:40px; position:absolute; right:0; top:0;"></span>
+                            </div>
+                            <div class="BookingTime" style="float:left; width:50%; text-align:center; position:relative;">
+                                <strong style="display:block; color:#adb8c2; font-size:14px; font-weight:700;">
+                                    TIME: 
+                                </strong> 
+                                    @ViewData["BookingTime"]
+                            </div>
+                        </div>
+                        <div class="seats" style="float: left; width: 90vh; overflow:auto;">
+                            <div class="goldSeat" style="width: 30vh; float:left; text-align:center; padding:15px 0 30px 0; border-right:1px solid #ebeff2;">
+                                <strong style="color: gold; font-size:14px;">
+                                    GOLD
+                                </strong> 
+                                    @ViewData["SeatCategoryGoldPrice"]
+                            </div>
+                            <div class="orangeSeat" style="width: 30vh; float:left; text-align:center; padding:15px 0 30px 0; border-right:1px solid #ebeff2;">
+                                <strong style="color: orange; font-size:14px;">
+                                    ORANGE
+                                </strong> 
+                                    @ViewData["SeatCategoryOrangePrice"]
+                            </div>
+                            <div class="blueSeat" style="width: 30vh; float:left; text-align:center; padding:15px 0 30px 0; border-right: none;">
+                                <strong style="color: aqua; font-size:14px;">
+                                    BLUE
+                                </strong> 
+                                    @ViewData["SeatCategoryBluePrice"]
+                            </div>
+
+                        </div>
+                        <div class="seatNumber" style="float:left; width: 91vh;">
+
+                            <div class="goldSeat" style="border-right:1px solid #ebeff2; margin-left: 0; width: 30vh; float:left; text-align:center; padding:15px 0 30px 0; background:#f7f8fa; overflow:auto; font-size:16px; color:#59687f; font-weight:600; ">
+                                <strong>Number of Seats</strong> 5
+                            </div>
+
+                            <div class="orangeSeat" style="border-right:1px solid #ebeff2;  margin-left: 0; width: 30vh; float:left; text-align:center; padding:15px 0 30px 0; background:#f7f8fa; overflow:auto; font-size:16px; color:#59687f; font-weight:600;">
+                                <strong>Number of Seats</strong> 3
+                            </div>
+
+                            <div class="blueSeat" style="border-right: none;  margin-left: 0; width: 30vh; float:left; text-align:center; padding:15px 0 30px 0; background:#f7f8fa; overflow:auto; font-size:16px; color:#59687f; font-weight:600;">
+                                <strong>Number of Seats</strong> 13
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="checkout-footer" style=" margin: 1px 0px 1px 0px; padding: 0px 0px 20px 0px; text-align:center;">
+                    <input class="checkout-button" type="button" style="width: 120px; height: 30px; font-weight: 700; " onclick="window.location.href = 'https://localhost:5001/Checkout/ViewCart';" value="Checkout" />
+                </div>
+           </div>
+       </form>
+    </div>
+</div>
+</center>

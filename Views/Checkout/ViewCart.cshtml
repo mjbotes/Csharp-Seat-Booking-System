@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "View Cart";
+}
+
+ <center>
+     <div style="display: block;">
+        <div class="viewCartInvoice" style="box-sizing: border-box; float: none; margin: 0 auto;">
+            <h2 class="display-4" style="text-align:center">View Cart <i class="fa fa-shopping-cart"></i></h2>
+            <hr>
+            <h4 style="text-align:center">@User.Identity.Name</h4>
+    
+            <div class="columns" style="float: none; width: 80vh; padding: 8px;">
+                <ul class="price" style="list-style-type: none; border: 1px solid #eee; margin: 0; padding: 0 20px 0 20px;">
+                    <li class="header" style="background-color:#4CAF50; border-bottom: 1px solid #eee; padding: 20px; text-align: center; "><h4>@ViewData["EventName"]</h4></li>
+                    <li class="grey" style=" border-bottom: 1px solid #eee; padding: 20px; text-align: center;  background-color: #eee; font-size: 17px;">@ViewData["Venue"]</li>
+                    <li style=" border-bottom: 1px solid #eee; padding: 20px; text-align : center;">@ViewData["BookingDate"]</li>
+                    <li style=" border-bottom: 1px solid #eee; padding: 20px; text-align: center;">@ViewData["BookingTime"]</li>
+                    <li style=" border-bottom: 1px solid #eee; padding: 20px; text-align: center;">@ViewData["NumberOfTickets"]</li>
+                    <li style=" border-bottom: 1px solid #eee; padding: 20px; text-align: center;">@ViewData["PriceOfTickets"]</li>
+                    <span>
+                    <li class="grey" style="background-color: gray; border: none; color: white; padding: 10px 25px; text-align: center; text-decoration: none; font-size: 18px;"><input style="color: #4CAF50;" type="button" onclick="window.location.href = 'https://localhost:5001/Checkout/PaymentSuccess';" value="Pay Now"> <input style="color: red;" type="button" onclick="window.location.href = 'https://localhost:5001/Checkout/PaymentFailed';" value="Cancel"></li>
+                    </span>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</center>
